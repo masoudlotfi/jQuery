@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+textarea{
+	width:250px;
+	height:150px;
+	border:dotted 1px #999999;
+	resize:none;
+}
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+	/*
+	$('textarea').keydown(function(){
+		alert('DOWN');	
+	});
+	*/
+	
+	$('textarea').keyup(function(){
+		alert('KEY UP');	
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<textarea></textarea>
+</body>
+</html>

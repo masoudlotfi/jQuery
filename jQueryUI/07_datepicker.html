@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="script/jquery-1.10.2.js"></script>
+<script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+<script>
+$(document).ready(function() {
+    
+	$('#dp').datepicker({
+		dateFormat:'dd-mm-yy',
+		showAnim:'bounce',
+		showButtonPanel:true,
+		maxDate:4,
+		minDate:-2
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<input type="text" id="dp">
+</body>
+</html>

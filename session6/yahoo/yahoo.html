@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+*{
+	padding:0;
+	margin:0;
+}
+#container{
+	width:400px;
+	margin:20px auto;
+	border:solid 1px #B9C7D3;
+	padding-top:4px;
+}
+#placeholder{
+	text-align:center;
+	padding-bottom:100px;
+}
+#news{
+	height:80px;
+	background-image:url(images/bg_off.jpg);
+}
+#news a{
+	height:81px;
+	width:100px;
+	display:block;
+	float:left;
+	text-align:center;
+	border-top:solid 1px #B9C7D3;
+}
+#news a img{
+	margin-top:20px;
+	border:solid 1px #C5CED7;
+}
+#news a:hover img{
+	margin-top:21px;
+}
+/*
+#news a:nth-child(even){
+	background-color:#CCC;
+}
+*/
+#news a:first-child{
+	background-image:url(images/bg_on.jpg);
+	border-top:none;
+}
+#arrow{
+	height:8px;
+	background:url(images/arrow.jpg) no-repeat 36px 0;
+}
+</style>
+<script>
+function yahoo(address,aid,arrow){
+	document.getElementById('bigimage').src=address;	
+	
+	for(i=1;i<=4;i++){
+		document.getElementById('link'+i).style.backgroundImage='url(images/bg_off.jpg)';
+		document.getElementById('link'+i).style.borderTop='solid 1px #B9C7D3';
+	}
+	
+	document.getElementById(aid).style.backgroundImage='url(images/bg_on.jpg)';
+	document.getElementById('arrow').style.backgroundPosition=arrow;
+	document.getElementById(aid).style.borderTop='none';
+}
+</script>
+</head>
+
+<body>
+<div id="container">
+	<section id="placeholder">
+    	<img src="images/big1.jpg" id="bigimage">
+    </section>
+    <section id="arrow"></section>
+    <section id="news">
+    	<a href="#" onMouseOver="yahoo('images/big1.jpg','link1','36px 0');" id="link1"><img src="images/small1.jpg"></a>
+        <a href="#" onMouseOver="yahoo('images/big2.jpg','link2','136px 0');" id="link2"><img src="images/small2.jpg"></a>
+        <a href="#" onMouseOver="yahoo('images/big3.jpg','link3','236px 0');" id="link3"><img src="images/small3.jpg"></a>
+        <a href="#" onMouseOver="yahoo('images/big4.jpg','link4','336px 0');" id="link4"><img src="images/small4.jpg"></a>
+    </section>
+</div>
+</body>
+</html>

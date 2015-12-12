@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="script/jquery-1.10.2.js"></script>
+<script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+<script>
+$(document).ready(function() {
+    $('#tabs').tabs({
+		//event:'mouseover',
+		collapsible:true
+	}).find('.ui-tabs-nav').sortable({axis:'x'});
+});
+</script>
+<style>
+#tabs{
+	width:300px;
+}
+body{
+	font-size:12px;
+}
+</style>
+</head>
+
+<body>
+<div id="tabs">
+	<ul>
+    	<li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#tutorials">Tutorials</a></li>
+    </ul>
+    <div id="portfolio">
+    	<p>Portfolio content</p>
+    </div>
+    <div id="news">
+    	<p>News content</p>
+    </div>
+    <div id="tutorials">
+    	<p>Tutorials content</p>
+    </div>
+</div>
+</body>
+</html>

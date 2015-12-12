@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+body{
+	background-color:#06C;
+	background-image:url(images/clouds.png);
+	background-repeat:repeat-x;
+	background-position:0 0;
+	-webkit-transition:all 100s linear;
+	-moz-transition:all 100s linear;
+	-o-transition:all 100s linear;
+	transition:all 100s linear;
+	height:640px;
+}
+.cloud_moving{
+	background-position:1000px 0;
+}
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+        $('body').addClass('cloud_moving');
+    });
+</script>
+</head>
+
+<body>
+</body>
+</html>

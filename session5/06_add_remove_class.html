@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+.div_style{
+	width:150px;
+	height:150px;
+	background-color:#069;
+}
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#add').click(function(){
+		$('div').addClass('div_style');	
+		//$('div').css({'width':'150px','height':'150px','background-color':'blue'});
+	});
+	
+	$('#remove').click(function(){
+		$('div').removeClass('div_style');	
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div></div>
+<hr>
+<button id="add">Add Class</button>
+<button id="remove">remove Class</button>
+</body>
+</html>

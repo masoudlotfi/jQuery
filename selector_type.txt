@@ -1,0 +1,73 @@
+selector
+.selector
+#selector
+selector,selctor
+selector selector
+selector>selector
+selector+selector
+------------------------
+FILTER
+------------------------
+1) basic
+	:first
+	:last
+	:even
+	:odd
+	:animated
+	:header
+	:gt(index)
+	:lt(index)
+	:eq(index)
+	:not(selector)
+	::selection
+
+2) attribute
+	element[attrbite]
+	element[attribute="value"]
+	[attribute^="value"]
+	[attribute$="value"]
+	[attribute~="value"]
+
+3) content
+	:contains(text)
+	:empty
+	:has(selector)
+	:parent
+
+4) visibility
+	:visible
+	:hidden
+
+5) child
+	:first-child
+	:last-child
+	:only-child
+	:nth-child(index)
+	:nth-child(even)
+	:nth-child(odd)
+	:nth-child(equation)
+
+6) form
+	:enabled
+	:disabled
+	:checked
+	:selected
+	:focus
+	:input
+	:text
+	:password
+	:file
+	:image
+	:reset
+	:submit
+	:button
+
+
+
+
+
+
+
+
+
+

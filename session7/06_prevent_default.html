@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('a#show_message').click(function(e){
+			e.preventDefault();
+			$('#feedback').html("<h1>Hypertext Clicked</h1>");
+	})
+	
+});
+</script>
+</head>
+
+<body>
+<a id="show_message" href="http://www.google.com">Show Message</a>
+<div id="feedback"></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#box{
+	width:150px;
+	height:150px;
+	background-color:#06C;
+	margin-left:25px;
+	color:white;
+	padding:6px;
+}
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#w').click(function(){
+		$('#box').animate({'width':'450px'},1000);	
+	});
+	
+	$('#f').click(function(){
+		$('#box').animate({'font-size':'25px'},1000);	
+	});
+	
+	$('#m').click(function(){
+		$('#box').animate({'margin-left':'250px'},1000);	
+	});
+	
+	$('#all').click(function(){
+		$('#box').animate({'width':'450px','margin-left':'250px','font-size':'25px'},1000);	
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div id="box">animation</div>
+<hr>
+<button id="w">Width</button>
+<button id="f">Font Size</button>
+<button id="m">Move</button>
+<button id="all">All Function</button>
+</body>
+</html>

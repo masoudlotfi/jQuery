@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="script/jquery-1.10.2.js"></script>
+<script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+<script>
+$(document).ready(function() {
+    
+	$('#content').accordion({
+	
+		icons:{'header':'ui-icon-plus'},
+		//event:'mouseover',
+		collapsible:true,
+		active:2
+		
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div id="content" style="width:550px; margin:20px auto">
+	
+    <h3><a href="#">Web</a></h3>
+    <div>
+    	this is text
+    </div>
+    	
+    <h3><a href="#">News</a></h3>
+    <div>
+    	this is text
+    </div>
+    
+    <h3><a href="#">Weather</a></h3>
+    <div>
+    	this is text
+    </div>
+    
+    <h3><a href="#">Login</a></h3>
+    <div>
+    	this is text
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+ul#menu{
+	list-style-type:none;
+	border-bottom:solid 1px #FF9900;
+	padding-bottom:6px;
+}
+ul#menu li{
+	display:inline;
+}
+ul#menu a{
+	text-decoration:none;
+	color:#930;
+	font-family:arial;
+	font-size:12px;
+	letter-spacing:1px;
+	margin-right:15px;
+}
+</style>
+<script src="script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#show_pages').load('pages/home.html');
+	$('ul#menu a').click(function(){
+	
+		var page_title=$(this).attr('title');
+		$('#show_pages').load('pages/'+page_title+'.html');
+		
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<ul id="menu">
+	<li><a href="#" title="home">Home</a></li>
+    <li><a href="#" title="services">Services</a></li>
+    <li><a href="#" title="contactus">Contact Us</a></li>
+</ul>
+<div id="show_pages"></div>
+</body>
+</html>

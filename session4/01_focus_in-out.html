@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('.firstname').focusin(function(){
+		$(this).css('background-color','red');
+	}).focusout(function(){
+		$(this).css('background-color','white');	
+	});
+	
+	
+});
+</script>
+</head>
+
+<body>
+<input type="text" class="firstname">
+<input type="text" class="firstname">
+<input type="text" class="firstname">
+<input type="text" class="firstname">
+<input type="text" class="firstname">
+<input type="text" class="firstname">
+</body>
+</html>

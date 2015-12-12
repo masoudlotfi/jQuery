@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Groundswell photo galleries</title>
+<link href="../_css/main.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../_scripts/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+
+	$('a:has(img.gallery)').click(function(e){
+		
+		e.preventDefault();
+		var img_src=$(this).attr('href');
+		var img_title=$(this).attr('title');
+		$('#photo_large').attr('src',img_src);
+		$('#caption1').text(img_title);
+		
+			
+	});
+
+});
+</script>
+</head>
+
+<body>
+<div id="wrapper">
+	<div id="header">
+		<div id="contactButton">
+			<a href="mailto:contact@groundswell.com" title="contact us">Contact 
+			Us</a></div>
+		<img alt="Groundswell" height="110" src="../_assets/banner.gif" width="770" />
+		<div id="mainNav">
+			<ul>
+				<li><a href="../index.htm">Home</a></li>
+				<li><a href="../gear.htm">Gear</a></li>
+				<li><a class="current" href="../lifestyle.htm">Lifestyle</a></li>
+				<li><a href="../videos.htm">Videos</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="identifier">
+		<img alt="Live the lifestyle" height="90" src="../_images/lifestyle_banner.jpg" width="770" /></div>
+	<div id="sidebar">
+		<h3>Ventura 7/21/08</h3>
+		<p>This set is from our recent trip to Ventura. We had a blast, even though 
+		the windsurfers constantly cut across our area of the beach. Check them 
+		out!</p>
+        
+        
+        <a href="../_images/ventura_01.jpg" title="picture 1">
+		<img id="thumb_01" alt="ventura set" class="gallery" height="160" name="thumb_01" src="../_images/ventura_01_thumb.jpg" width="200" />
+        </a>
+        
+		<a href="../_images/ventura_02.jpg" title="picture 2">
+		<img id="thumb_02" alt="ventura set" class="gallery" height="160" name="thumb_02" src="../_images/ventura_02_thumb.jpg" width="200" />
+        </a>
+        
+        <a href="../_images/ventura_03.jpg" title="picture 3">
+		<img id="thumb_03" alt="ventura set" class="gallery" height="160" name="thumb_03" src="../_images/ventura_03_thumb.jpg" width="200" />
+        </a>
+        
+        <a href="../_images/ventura_04.jpg" title="picture 4">
+		<img id="thumb_04" alt="ventura set" class="gallery" height="160" name="thumb_04" src="../_images/ventura_04_thumb.jpg" width="200" />
+        </a>
+       
+        
+        
+		</div>
+	<div id="mainContent">
+		<div id="subNav">
+			<ul id="lifestyleSubNav">
+				<li><a href="journal.htm">Journal</a></li>
+				<li><a class="current" href="photos.htm">Photos</a></li>
+				<li><a href="conditions.htm">Surf Conditions</a></li>
+				<li><a class="last" href="register.htm">Register</a></li>
+			</ul>
+		</div>
+		<div id="photoSet">
+			<h1 class="clearLeft">Todd Crampton in Ventura</h1>
+			<div id="photoGroup">
+				<img id="photo_large" alt="ventura photo" height="345" name="photo_large" src="../_images/ventura_01.jpg" width="460" />
+				<p id="caption1" class="caption">Getting ready to hit the surf</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p>© Groundswell Surf <a href="../privacy.htm">Privacy Policy</a> |
+		<a href="../terms.htm">Terms and Conditions</a></p>
+	</div>
+</div>
+
+</body>
+
+</html>

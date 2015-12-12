@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#drop{
+	width:150px;
+	height:150px;
+	background-color:#EFEFEF;
+}
+.border{
+	border:solid 1px #000000;
+}
+</style>
+<script src="script/jquery-1.10.2.js"></script>
+<script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('.web,.names').draggable({revert:true});
+	$('#drop').droppable({
+		//drop:function(){alert('drop')}	
+		hoverClass:'border',
+		tolerance:'touch',
+		accept:'.web'
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<span class="web">html5</span> / 
+<span class="web">css</span> / 
+<span class="names">mohammad</span>
+<div id="drop"></div>
+</body>
+</html>

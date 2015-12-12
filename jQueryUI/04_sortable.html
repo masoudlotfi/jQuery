@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#web,#names{
+	list-style-type:none;
+}
+</style>
+<script src="script/jquery-1.10.2.js"></script>
+<script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#web,#names').sortable({
+		//containment: 'parent',
+		tolerance:'pointer',
+		cursor:'pointer',
+		revert:true,
+		opacity:.5,
+		connectWith:'#web,#names'
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<ul id="web">
+	<li>html5</li>
+    <li>css3</li>
+    <li>javascript</li>
+    <li>jquery</li>
+    <li>php</li>
+</ul>
+<ul id="names">
+	<li>mohammad</li>
+    <li>ahmad</li>
+    <li>sara</li>
+</ul>
+</body>
+</html>

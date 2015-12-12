@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#center{
+	width:100px;
+	height:100px;
+	background-color:#F00;
+	position:absolute;
+}
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+	$('#center').css('left',$(window).width()/2-$('#center').width()/2).css('top',$(window).height()/2-$('#center').height()/2);
+    $(window).resize(function(){
+		var win_width=$(window).width()/2;
+		var win_height=$(window).height()/2;
+		var obj_width=$('#center').width()/2;
+		var obj_height=$('#center').height()/2;
+		$('#center').css('left',win_width-obj_width).css('top',win_height-obj_height);
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="center"></div>
+</body>
+</html>

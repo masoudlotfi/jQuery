@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#parent_drag{
+	width:300px;
+	height:300px;
+	border:solid 1px #000000;
+	background-color:#CCC;
+}
+</style>
+<script src="script/jquery-1.10.2.js"></script>
+<script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#drag').draggable({
+		//axis:'y',	
+		//containment:[0,0,80,80],
+		cursor:'pointer',
+		//grid:[25,25],
+		revert:true,
+		opacity:.1,
+		//revertDuration:200,
+		start:function(){$('#feedback').text('start dragging')},
+		drag:function(){$('#feedback').text('NOW Dragging')},
+		stop:function(){$('#feedback').text('Finish')}
+	});
+	
+});
+</script>
+</head>
+
+<body>
+	<!--<div id="parent_drag">-->
+<span id="drag">Drag Me</span>
+	<!--</div>-->
+<div id="feedback"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('select#country').change(function(){
+		
+		//hide first item when change country list
+		$('select#country option:first').css('display','none');
+		
+		var country_value=$(this).val();
+		$('div#feedback').html("<a target='_blank' href='"+country_value+"'>link</a>");
+		
+			
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<form>
+<select id="country">
+	<option>Choose Website</option>
+	<option value="http://www.yahoo.com">Yahoo</option>
+    <option value="http://www.msn.com">MSN</option>
+    <option value="http://www.facebook.com">Facebook</option>
+</select>
+</form>
+<div id="feedback"></div>
+</body>
+</html>

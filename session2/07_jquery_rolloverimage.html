@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+	$('#services').hover(function(){
+		$(this).attr('src','../images/btn_solutions_on.jpg');	
+	},function(){
+		$(this).attr('src','../images/btn_solutions_off.jpg');	
+	});
+	
+	$('#info').click(function(){
+		var image_src=$('#services').attr('src');
+		alert(image_src);
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<button id="info">Image Information</button>
+<hr>
+<img src="../images/btn_solutions_off.jpg" id="services">
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+/*
+p{
+	background-color:#F00;
+}
+*/
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+<script>
+
+	//document.getElementById('box').style.backgroundColor="red";
+	
+$(document).ready(function(){
+	
+	$('p#box').css('background-color','#f00');	
+	//$('ul').css('font-family','verdana').css('color','#06C').css('font-size','11px');
+	$('ul').css({'font-family':'verdana','color':'red','font-size':'11px'});
+	
+});
+
+
+</script>
+</head>
+
+<body>
+<p id="box">paragraph</p>
+<ul>
+	<li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+    <li>item 4</li>
+    <li>item 5</li>
+</ul>
+</body>
+</html>

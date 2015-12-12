@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#drop{
+	width:150px;
+	height:150px;
+	background-color:#EFEFEF;
+}
+</style>
+<script src="script/jquery-1.10.2.js"></script>
+<script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#drag').draggable({revert:true});
+	$('#drop').droppable({
+		drop:function(){
+			$('#drag').css('visibility','hidden');
+			$('#drop').text('jquery');
+		}	
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<span id="drag">jquery</span>
+<div id="drop"></div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to Groundswell</title>
+    <link href="_css/main.css" rel="stylesheet" type="text/css" media="screen, projection" />
+    <script type="text/javascript" src="_scripts/jquery_1.10.1.min.js"></script>
+    <script>
+	$(document).ready(function() {
+        setInterval(photo,2000);
+    });
+	
+	function photo(){
+		var cur_photo=$('#photoshow div.current');
+		var nex_photo=cur_photo.next();
+		
+		var cur_style=$('#counter span.current_style');
+		var nex_style=cur_style.next();
+
+		if(nex_photo.length==0){
+			nex_photo=$('#photoshow div:first');
+		}
+		
+		if(nex_style.length==0){
+			nex_style=$('#counter span:first');
+		}
+		
+		nex_style.removeClass('style_previous').addClass('style_current');
+		cur_style.removeClass('style_current').addClass('style_previous');
+		
+		cur_photo.removeClass('current').addClass('previous');
+		nex_photo.css('opacity',0).addClass('current').animate({'opacity':1},1000,function(){
+			cur_photo.removeClass('previous');	
+		});
+		
+	}
+	
+	</script>
+</head>
+<body>
+
+    <div id="wrapper">
+        <div id="header">
+            <div id="contactButton">
+                <a href="mailto:contact@groundswell.com" title="contact us">Contact Us</a></div>
+            <img src="_assets/banner.gif" width="770" height="110" alt="Groundswell" />
+            <div id="mainNav">
+                <ul>
+                    <li><a href="index.htm" class="current">Home</a></li>
+                    <li><a href="gear.htm">Gear</a></li>
+                    <li><a href="lifestyle.htm">Lifestyle</a></li>
+                    <li><a href="videos.htm">Videos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="identifier">
+            <img src="_images/home_banner.jpg" width="770" height="90" alt="welcome to surfing paradise" /></div>
+        <div id="sidebar">
+            <img src="_images/surf1.jpg" width="200" height="160" alt="surfer" />
+            <h3>
+                This month's surfer's journal</h3>
+            <p>
+                Josh Cambria pens this month's surfer journal. Check out his month-long surfing
+                experience as he surfs up the coast from San Diego up to Ventura. Along the way
+                he meets several celebrities and finds a new favorite board. <a href="lifestyle/journal.htm">
+                    Check it out</a>.</p>
+            <img src="_images/fearless_small.jpg" width="200" height="68" alt="new board" />
+            <h3>
+                Check out our new board</h3>
+            <p>
+                Looking for a hot new board? <a href="gear/boards.htm">Check out</a> our new Fearless
+                board from legendary shaper Carl Benson.</p>
+                
+            <div id="photoshow">    
+            	
+            	<div class="current"><div>Slide Show 1</div><img src="_images/ventura_01_thumb.jpg" alt="Todd" width="200" height="160" class="gallery" /></div>
+                <div><div>Slide Show 2</div><img src="_images/ventura_02_thumb.jpg" alt="Todd" width="200" height="160" class="gallery" /></div>
+                <div><div>Slide Show 3</div><img src="_images/ventura_03_thumb.jpg" alt="Todd" width="200" height="160" class="gallery" /></div>
+                <div><div>Slide Show 4</div><img src="_images/ventura_04_thumb.jpg" alt="Todd" width="200" height="160" class="gallery" /></div>
+            
+            </div>
+            <div id="counter">
+            	<span style="font-weight:bold;">1</span> | <span>2</span> | <span>3</span> | <span>4</span>
+            </div>
+            
+            <h3>
+                Photos anyone?</h3>
+            <p>
+                Care to check out this month's featured photo gallery? <span class="clearLeft">Todd
+                    Crampton</span> almost gets run over by wind surfers in Ventura and we are there!
+                <a href="lifestyle/photos.htm">You know you want to watch!</a></p>
+        </div>
+        <div id="mainContent">
+            <h1>
+                Welcome to Groundswell</h1>
+            <p>
+                What is surf paradise? Is it a place? A state of mind? What does surf paradise mean
+                to you? Groundswell is all about finding that place. Whether it's checking out the
+                latest gear, immersing yourself in the surfing lifestyle, or watching some of the
+                sickest video this side of the pipeline, we've got you covered.
+            </p>
+            <p>
+                On our site you'll find:</p>
+            <ul>
+                <li>The latest gear</li>
+                <li>Surfing journals</li>
+                <li>Surfing photos</li>
+                <li>Competition videos</li>
+                <li>Surf condition reports</li>
+                <li>...and much more!</li>
+            </ul>
+            <p>
+                So take off your sandals and wax your board up... you're here. And hey, if you are
+                ever in Ventura, CA, <a href="http://maps.google.com/maps?f=q&hl=en&geocode=&q=171+Market+St+%23+C,+Ventura,+CA&sll=34.258178,-119.237636&sspn=0.090094,0.180588&ie=UTF8&z=15&iwloc=cent">
+                    look us up</a>!</p>
+            <h2>
+                Latest News</h2>
+            <h4>
+                <span class="subhead">Simon Craven wins the Maui invitational</span></h4>
+            <p>
+                Late July saw some of the best surfing the world has ever seen. The water temperature
+                and currents brought perfect conditions for the Maui Invitational and the field
+                wasted no time in shredding last year's scores. When the dust settled Simon Craven
+                won his first ever Maui title. Fresh off his win in Australia, it looks like Simon's
+                a name we'll be hearing a lot of in the future!</p>
+            <h4>
+                <span class="subhead">Velosurty releases new board</span></h4>
+            <p>
+                Up and coming surf shop Velosurty released a their new long board last month. &quot;Keerang!&quot;
+                echo's the super-hero theme of their last long board, &quot;Bang-Pow!&quot; Artist
+                Kelly Crandle supplies the look and feel. This board guarantees a smooth ride and
+                eye-catching looks. In stores next month. While you're at it, check out our <a href="gear/boards.htm">
+                    new boards</a> as well!</p>
+            <h4>
+               <span class="subhead"> Like the new look?</span></h4>
+            <p>
+                You may have noticed things look a little different here at Groundswell! We'll we
+                decided it was time for a change and wanted a fresher look. Thanks to the awesome
+                web techniques we learned from <a href="http://www.lynda.com" target="_blank">lynda.com</a>,
+                we were able to completely redesign the site. If you are interested in web design
+                at all you should probably check them <a href="http://www.lynda.com" target="_blank">
+                </a>out as well!</p>
+        </div>
+        <div id="footer">
+            <p>
+                &copy; Groundswell Surf <a href="privacy.htm">Privacy Policy</a> | <a href="terms.htm">
+                    Terms and Conditions</a></p>
+        </div>
+    </div>
+</body>
+</html>

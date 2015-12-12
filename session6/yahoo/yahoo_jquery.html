@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+*{
+	padding:0;
+	margin:0;
+}
+#container{
+	width:400px;
+	margin:20px auto;
+	border:solid 1px #B9C7D3;
+	padding-top:4px;
+}
+#placeholder{
+	text-align:center;
+	padding-bottom:100px;
+}
+#news{
+	height:80px;
+	background-image:url(images/bg_off.jpg);
+}
+#news a{
+	height:81px;
+	width:100px;
+	display:block;
+	float:left;
+	text-align:center;
+	border-top:solid 1px #B9C7D3;
+}
+#news a img{
+	margin-top:20px;
+	border:solid 1px #C5CED7;
+}
+#news a:hover img{
+	margin-top:21px;
+}
+/*
+#news a:nth-child(even){
+	background-color:#CCC;
+}
+*/
+#news a:first-child{
+	background-image:url(images/bg_on.jpg);
+	border-top:none;
+}
+#arrow{
+	height:8px;
+	background:url(images/arrow.jpg) no-repeat 36px 0;
+}
+</style>
+<script src="script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#news a').mouseenter(function(){
+		
+		var big_src=$(this).attr('big');
+		var arrow_pos=$(this).attr('pos');
+		
+		
+		$('img#bigimage').attr('src',big_src);
+		
+		$('#news a').css('background-image','url(images/bg_off.jpg)');
+		$('#news a').css('border-top','solid 1px #B9C7D3');
+		
+		
+		$(this).css('background-image','url(images/bg_on.jpg)');
+		$(this).css('border-top','none');
+		$('#arrow').css('background-position',arrow_pos+'px 0');
+			
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div id="container">
+	<section id="placeholder">
+    	<img src="images/big1.jpg" id="bigimage">
+    </section>
+    <section id="arrow"></section>
+    <section id="news">
+    	<a href="#" id="link1" big="images/big1.jpg" pos="36"><img src="images/small1.jpg"></a>
+        <a href="#" id="link2" big="images/big2.jpg" pos="136"><img src="images/small2.jpg"></a>
+        <a href="#" id="link3" big="images/big3.jpg" pos="236"><img src="images/small3.jpg"></a>
+        <a href="#" id="link4" big="images/big4.jpg" pos="336"><img src="images/small4.jpg"></a>
+    </section>
+</div>
+</body>
+</html>

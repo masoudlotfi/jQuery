@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#box{
+	width:350px;
+	height:200px;
+	background-color:#06C;
+	margin-left:25px;
+}
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#fo').click(function(){
+		$('#box').fadeOut(1000);	
+	});
+	
+	$('#fi').click(function(){
+		$('#box').fadeIn(1000);	
+	});
+	
+	$('#ft30').click(function(){
+		$('#box').fadeTo(1000,.3);	
+	});
+	
+	$('#ft100').click(function(){
+		$('#box').fadeTo(1000,1);
+	});
+	
+	$('#ft').click(function(){
+		$('#box').fadeToggle(1000);	
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div id="box"></div>
+<hr>
+<button id="fi">Fade In</button>
+<button id="fo">Fade Out</button>
+<button id="ft30">fade To 30%</button>
+<button id="ft100">fade To 100%</button>
+<button id="ft">fade Toggle</button>
+</body>
+</html>

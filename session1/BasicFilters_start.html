@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Document</title>
+<style>
+/*
+ul#list1 li:last-child{
+	background-color:red;
+}
+*/
+/*
+p:first{
+	background-color:red;
+}
+*/
+</style>
+<script type="text/javascript" src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function(){
+	
+	//$('ul#list1 li:nth-child(3)').css('background-color','red');
+	//$('p:first').css('background-color','red');
+	//$('ul#list1 li:odd').css('background-color','red');
+	//$('h1,h2,h3,h4,h5,h6').css('background-color','red');
+	$(':header').css('background-color','green');
+		
+});
+</script>
+</head>
+<body>
+	<ul id="list1">
+		<li class="a">item 1 [index=0]</li>
+		<li class="a">item 2 [index=1]</li>
+		<li class="b">item 3 [index=2]</li>
+		<li class="b">item 4 [index=3]</li>
+	</ul>
+
+    <p class="a">This is paragraph 1</p>
+    <p id="para1">This is paragraph 2</p>
+    <p class="b">This is paragraph 3</p>
+    <p id="para4" lang="en-us">This is paragraph 4</p>
+    
+    <h1>This is the content for Layout H1 Tag</h1>
+    <h2>This is the content for Layout H2 Tag</h2>
+    <h3>This is the content for Layout H3 Tag</h3>
+    <h4>This is the content for Layout H4 Tag</h4>
+    <h5>This is the content for Layout H5 Tag</h5>
+    <h6>This is the content for Layout H6 Tag</h6>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+span#links a{
+	text-decoration:none;
+	font-family:verdana;
+	font-size:11px;
+	color:#06C;
+	letter-spacing:2px;
+}
+#tooltip{
+	position:absolute;
+	background-color:#F0F0F0;
+	color:#000;
+	font-family:arial;
+	font-size:10px;
+	padding:3px;
+	border:solid 1px #000000;
+	text-align:center;
+	visibility:hidden;
+}
+	
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('span#links a,div#images img').mousemove(function(e){
+		var x=e.clientX+10;
+		var y=e.clientY+10;
+		var title=$(this).attr('title');
+		
+		
+		$('#tooltip').html(title).css({'visibility':'visible','left':x+'px','top':y+'px'});	
+	}).mouseleave(function(){
+		$('#tooltip').css('visibility','hidden');	
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<span id="links">
+	<a href="#" title="Google Search Engine">Google</a> &bull; 
+    <a href="#" title="Yahoo Search Engine">Yahoo</a>
+</span><br><br>
+<div id="images">
+<img src="images/feature9.jpg" width="57" height="94" title="<img src='images/feature9.jpg'>">
+</div>
+<div id="tooltip"></div>
+<div id="feedback"></div>
+</body>
+</html>

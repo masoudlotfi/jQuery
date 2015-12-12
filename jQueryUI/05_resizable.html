@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+#box{
+	width:150px;
+	height:150px;
+	background-color:#CCC;
+	border:solid 1px #333333;
+}
+#obj_parent{
+	width:400px;
+	height:400px;
+	background-color:#999;
+}
+</style>
+<script src="script/jquery-1.10.2.js"></script>
+<script src="script/jquery-ui-1.10.4.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+<script>
+$(document).ready(function() {
+    
+	$('#box').resizable({
+		
+		//containment:'parent',
+		animate:true,
+		animateDuration:200,
+		ghost:true,
+		animateEasing:'linear',
+		//aspectRatio:true,
+		autoHide:true,
+		grid:[50,50],
+		//maxWidth:200,
+		//minWidth:100,
+		//maxHeight:200,
+		//minHeight:150
+			
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<!--<div id="obj_parent">-->
+	<div id="box"></div>
+<!--</div>-->
+</body>
+</html>

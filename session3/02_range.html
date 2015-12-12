@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#currency').change(function(){
+		var cur_value=$(this).val();
+		$('#feedback').text(cur_value);
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<input type="range" min="0" max="50" step="5" value="10" id="currency">
+<span id="feedback">10</span>
+</body>
+</html>

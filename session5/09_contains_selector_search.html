@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+.highlight{
+	color:#F00;
+	font-weight:bold;
+}
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('input[type="search"]').keyup(function(){
+		var search_text=$(this).val();
+		
+		$('ul#web li').removeClass('highlight');
+		if(search_text!=''){
+			$('ul#web li:contains("'+search_text+'")').addClass('highlight');
+		}
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<input type="search" results>
+<ul id="web">
+	<li>html5</li>
+    <li>css3</li>
+    <li>javascript</li>
+    <li>jquery</li>
+    <li>php</li>
+</ul>
+</body>
+</html>

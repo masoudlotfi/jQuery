@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Animal</title>
+<link rel="stylesheet" type="text/css" href="css/share_style.css" />
+<link href="css/default.css" rel="stylesheet" type="text/css" id="external_style" />
+<script type="text/javascript" src="script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('span#color_style img').click(function(){
+		var css_style_name=$(this).attr('id');
+		$('link#external_style').attr('href','css/'+css_style_name+'.css');
+		$('span#color_style img').css('width','10px');
+		$(this).css('width','12px');
+	});
+	
+	$('span#change_size img').click(function(){
+		var new_size=$(this).attr('title');
+		$('p#maintext').css('font-size',new_size+'px');	
+	});
+	
+	$('#range_size').change(function(){
+		var range_value=$(this).val();
+		$('p#maintext').css('font-size',range_value+'px');
+			
+	});
+	
+});
+</script>
+</head>
+<body>
+<div id="container">
+  <div id="fav_style">
+  <span id="color_style">
+  <img id="default" style="width:12px" src="images/icon_default.jpg" />
+  <img id="pink" src="images/icon_pink.jpg"/>
+  <img id="blue" src="images/icon_blue.jpg"/>
+  </span> |
+  <span id="change_size"> 
+  <img title="11" src="images/Font_11px.jpg"/>
+  <img title="13" src="images/Font_13px.jpg"/>
+  <img title="15" src="images/Font_15px.jpg"/>
+  </span>
+  </div>
+  <div id="header"><img src="images/banner-kitty.jpg" width="754" height="179" /></div>
+  <div id="leftside">
+  <h1 style="width:150px; display:inline-block;">Adopt a Pet Today</h1>
+  <input type="range" min="10" max="20" step="2" value="11" style="width:100px" id="range_size" />
+  <p id="maintext">
+  If you're looking for a pet, consider a homeless stray or a pet from a shelter or pound. Thousands of cats and dogs are put to death every year in shelters simply because there are not enough homes.
+
+Kittens and puppies are cute, but the personalities of older cats and dogs are more predictable, so there are advantages to adopting them
+  </p>
+  <img src="images/dual-yawns.jpg" />
+  </div>
+  <div id="rightside"><img src="images/duce.jpg" width="290" height="368" /></div>
+</div>
+</body>
+</html>

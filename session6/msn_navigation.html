@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+body{
+	margin:0;
+}
+#nav{
+	background-color:#009AD9;
+	padding-left:10px;
+	padding-bottom:2px;
+	margin-top:25px;
+}
+#nav a{
+	text-decoration:none;
+	font-family:verdana;
+	font-size:11px;
+	color:white;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin-right:15px;
+}
+#subnav{
+	margin:8px 20px;
+	font-family:verdana;
+	font-size:11px;
+	color:#666;
+	word-spacing:8px;
+	text-transform:capitalize;
+	display:none;
+}
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('#nav a').mouseenter(function(){
+	
+		var content=$(this).attr('title');
+		$('#subnav').css('display','none').fadeIn(200).text(content);
+		
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div id="nav">
+<a href="#" title="bbc abc fox">news</a>
+<a href="#" title="xbox game movie">entertainment</a>
+</div>
+<div id="subnav"></div>
+</body>
+</html>

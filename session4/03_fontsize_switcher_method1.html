@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    
+	$('a').click(function(){
+		var a_text=$(this).text();
+		current_size=parseInt($('p').css('font-size'));
+		min_max_status=$(this).attr('title');
+		if(a_text=='bigger'){
+			var final_size=current_size+2;
+		}
+		else{
+			var final_size=current_size-2;
+		}
+		
+		$('p').css('font-size',final_size+'px');
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<a href="#" id="smaller" title="10">smaller</a> &bull; 
+<a href="#" id="bigger" title="20">bigger</a>
+<p style="font-size:16px;">jQuery</p>
+</body>
+</html>

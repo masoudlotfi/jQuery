@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+*{
+	margin:0;
+	padding:0;
+}
+#container{
+	width:350px;
+	border:solid 1px #006699;
+	margin:20px auto;
+}
+h1{
+	background-color:#7DCDEC;
+	font-family:verdana;
+	font-size:12px;
+	color:#378ADD;
+	padding:4px;
+	letter-spacing:3px;
+	border-bottom:solid 1px #006699;
+}
+#ml{
+	padding:4px 10px;
+}
+#ml a{
+	text-decoration:none;
+	font-family:verdana;
+	font-size:11px;
+	color:#069;
+}
+#ml img{
+	margin-right:5px;
+	margin-top:4px;
+}
+#news{
+	font-family:arial;
+	font-size:11px;
+	text-align:justify;
+	color:#666;
+	line-height:20px;
+	padding:7px 10px;
+}
+#news a{
+	width:15px;
+	height:15px;
+	display:inline-block;
+	background-image:url(images/fav.jpg);
+	visibility:hidden;
+}
+#news a:hover{
+	background-position:-15px 0;
+}
+#news:hover a{
+	visibility:visible;
+}
+</style>
+<script src="script/jquery_1.10.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+        
+		$('a#mltext').click(function(){
+			
+			var ml_status=$(this).text();
+			if(ml_status=='less'){
+				$('#mltext').text('more ...');
+				$('#mlimage').attr('src','images/more.jpg');
+				$('#news').slideUp('fast');
+			}
+			else{
+				$('#mltext').text('less');
+				$('#mlimage').attr('src','images/less.jpg');
+				$('#news').slideDown('slow');
+			}
+				
+		});
+		
+    });
+</script>
+</head>
+
+<body>
+<div id="container">
+	<h1>Web Design</h1>
+    <div id="ml">
+    	<img src="images/less.jpg" id="mlimage"> 
+        <a href="#" id="mltext">less</a>
+    </div>
+    <div id="news">
+    Notepad is a basic text-editing program and it's most commonly used to view or edit text files. A text file is a file type typically identified by the .txt file name extension. Notepad is a basic text-editing program and it's most commonly used to view or edit text files. A text file is a file type typically identified by the .txt file name extension. 
+    <a href="#" id="fav"></a>
+    </div>
+</div>
+</body>
+</html>

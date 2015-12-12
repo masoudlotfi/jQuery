@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+	$('#image1').mouseenter(function(){
+		$(this).css('opacity',.5).css('cursor','pointer');	
+	});
+	
+	$('#image1').mouseleave(function(){
+		$(this).css('opacity',1);	
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div id="gallery">
+	<img src="../images/pic3.jpg" id="image1">
+</div>
+</body>
+</html>

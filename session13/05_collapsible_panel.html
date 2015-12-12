@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+ul#menu{
+	list-style-type:none;
+	width:100px;
+	float:left;
+}
+a#pm{
+	text-decoration:none;
+	font-family:verdana;
+	font-size:11px;
+	font-weight:bold;
+	color:#900;
+	float:left;
+}
+</style>
+<script src="../script/jquery_1.10.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    //$('ul#menu li:first-child').append(' (first)');
+	//$('ul#menu li:last-child').append(' (last)');
+	//$('ul#menu').find('li').css('color','red');
+	//$('ul#menu').find('li').first().next().css('color','red');
+	//$('ul#menu').find('li').first().nextAll().css('color','red');
+	$('ul#menu').find('li').first().nextAll().hide();
+	$('a#pm').click(function(){
+		
+		$('ul#menu').find('li').first().nextAll().slideToggle(500);
+		var pmstatus=$(this).text();
+		if(pmstatus=='+'){
+			$('a#pm').text('-');
+		}
+		else{
+			$('a#pm').text('+');
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<a href="#" id="pm">+</a>
+<ul id="menu">
+	<li>html5</li>
+    <li>css3</li>
+    <li>javascript</li>
+    <li>jquery</li>
+    <li>php</li>
+</ul>
+</body>
+</html>
